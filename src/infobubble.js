@@ -930,6 +930,9 @@ InfoBubble.prototype.draw = function() {
       this.bubbleShadow_.style['height'] = this.px(2);
       break;
   }
+
+  // trigger custom rendered event
+  google.maps.event.trigger(this, 'rendered.markup.infobubble');
 };
 InfoBubble.prototype['draw'] = InfoBubble.prototype.draw;
 
